@@ -18,7 +18,7 @@ app = FastAPI()
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["https://studyscribe.framer.ai/"],
+    allow_origins=["https://teachingassistant-g5fba8fcdrc5a9b9.canadacentral-01.azurewebsites.net"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
@@ -156,4 +156,4 @@ async def process_files(
         raise HTTPException(status_code=500, detail="Internal Server Error")
 
 if __name__ == "__main__":
-    uvicorn.run("app:app", host="0.0.0.0", port=7860)
+    uvicorn.run("app:app", host="0.0.0.0", port=8000)
