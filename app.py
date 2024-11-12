@@ -18,7 +18,7 @@ app = FastAPI()
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["https://teachingassistant-g5fba8fcdrc5a9b9.canadacentral-01.azurewebsites.net"],
+    allow_origins=["*"],  # Allowing all origins for flexibility
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
@@ -115,6 +115,8 @@ async def process_files(
         if youtube_link:
             video = pytube.YouTube(youtube_link)
             stream = video.streams.filter(only_audio=True).first()
+            if not stream:
+                raise HTTPException(status_code=400, detail="Unable to find an audio stream for the provided YouTube link.")
             with tempfile.NamedTemporaryFile(delete=False, suffix=".mp4") as tmp_file:
                 stream.download(filename=tmp_file.name)
                 tmp_file_path = tmp_file.name
@@ -129,7 +131,7 @@ async def process_files(
                 tmp_file_path = tmp_file.name
             with open(tmp_file_path, "rb") as f:
                 reader = PyPDF2.PdfReader(f)
-                text_content = " ".join([page.extract_text() for page in reader.pages])
+                text_content = " ".join([page.extract_text() for page in reader.pages if page.extract_text()])
             os.unlink(tmp_file_path)
 
         # Handle Audio File
