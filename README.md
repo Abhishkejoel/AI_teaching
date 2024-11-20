@@ -1,11 +1,10 @@
 # AI-Powered Teaching Assistant
 
-Welcome to the **AI-Powered Teaching Assistant** project! This application integrates multiple AI-driven tools to enhance the learning experience for students. It features four main bots:
+Welcome to the **AI-Powered Teaching Assistant** project! This application integrates three AI-driven tools to enhance the learning experience for students. It features:
 
-1. **Summary Bot**: Summarizes content from YouTube videos, audio files, or PDF documents.
-2. **Doubt Solving Bot**: Answers questions based on the provided content.
-3. **Quiz Generation Bot**: Creates quizzes to test comprehension.
-4. **Notes Generation Bot**: Generates comprehensive lecture notes and PowerPoint presentations.
+1. **Summary Bot**: Generates concise summaries from YouTube videos, audio files, or PDF documents, allowing students to quickly grasp key points.
+2. **Quiz Generation Bot**: Creates multiple-choice quizzes based on the provided content to test comprehension and reinforce learning.
+3. **Notes Generation Bot**: Produces comprehensive lecture notes and downloadable PowerPoint presentations, aiding in study and teaching preparations.
 
 Access the live application [here](https://studyscribe.framer.ai/).
 
@@ -18,10 +17,9 @@ Access the live application [here](https://studyscribe.framer.ai/).
 
 ## Features
 
-- **Summary Bot**: Quickly generate concise summaries from various input types.
-- **Doubt Solving Bot**: Get instant answers to specific questions related to the content.
-- **Quiz Generation Bot**: Test your understanding with automatically generated quizzes.
-- **Notes Generation Bot**: Create detailed lecture notes and downloadable PowerPoint presentations.
+- **Summary Bot**: Quickly generate concise summaries from various input types such as YouTube URLs, audio files, or PDF documents.
+- **Quiz Generation Bot**: Automatically create multiple-choice questions to assess understanding and retention of the material.
+- **Notes Generation Bot**: Develop detailed lecture notes and PowerPoint presentations for effective studying and teaching.
 
 ## Setup and Installation
 
@@ -60,18 +58,13 @@ To run this project locally, follow these steps:
 
 ### Summary Bot
 1. Select **YouTube URL**, **Audio File**, or **PDF Document**.
-2. Provide the input.
+2. Provide the input by entering the URL or uploading the file.
 3. Click **Generate Summary** to view the summarized content.
 
-### Doubt Solving Bot
-1. Use the Summary Bot to generate a transcript.
-2. Enter your question related to the content.
-3. Click **Get Answer** to receive an AI-generated response.
-
 ### Quiz Generation Bot
-1. Generate a transcript using the Summary Bot.
-2. Click **Generate Quiz** to receive multiple-choice questions.
-3. Complete the quiz and view your results with explanations.
+1. Generate a summary using the Summary Bot.
+2. Click **Generate Quiz** to receive multiple-choice questions based on the content.
+3. Complete the quiz and view your results with explanations for any incorrect answers.
 
 ### Notes Generation Bot
 1. Select your input type and provide the content.
@@ -81,7 +74,7 @@ To run this project locally, follow these steps:
 ## Technologies Used
 
 - **Streamlit**: Interactive web application framework.
-- **OpenAI API**: Natural language processing for summarization, Q&A, and more.
+- **OpenAI API**: Natural language processing for summarization, quiz generation, and note-taking.
 - **YouTube Transcript API**: Extracting transcripts from YouTube videos.
 - **Pydub**: Audio file manipulation.
 - **PyPDF2**: PDF text extraction.
@@ -97,4 +90,3 @@ For any questions or support, feel free to reach out:
 ---
 
 *Enhance your learning experience with AI-powered tools!*
-
