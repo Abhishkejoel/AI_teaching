@@ -1,8 +1,0 @@
-fastapi
-uvicorn
-openai
-pydub
-pytube
-PyPDF2
-python-multipart
-aiofiles
